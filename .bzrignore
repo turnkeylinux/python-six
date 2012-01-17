@@ -1,0 +1,8 @@
+__pycache__
+./build
+debian/files
+debian/python-six
+debian/python3-six
+debian/tmp
+debian/*.debhelper*
+debian/*.substvars
