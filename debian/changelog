@@ -1,3 +1,9 @@
+six (1.1.0-2) UNRELEASED; urgency=low
+
+  * Convert to source format 3.0 (quilt).
+
+ -- Colin Watson <cjwatson@debian.org>  Tue, 17 Jan 2012 22:40:09 +0000
+
 six (1.1.0-1) unstable; urgency=low
 
   * Initial release (closes: #656234).
