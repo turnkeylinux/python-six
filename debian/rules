@@ -8,6 +8,10 @@ override_dh_auto_build:
 		$$python setup.py build; \
 	done
 
+override_dh_auto_test:
+	py.test -v
+	py.test-3 -v
+
 override_dh_auto_clean:
 	dh_auto_clean
 	find -name \*.pyc -print0 | xargs -0r rm -f
