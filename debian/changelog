@@ -1,11 +1,11 @@
-six (1.2.0-1) UNRELEASED; urgency=low
+six (1.2.0-1) unstable; urgency=low
 
   * New upstream release.
   * Add a watch file.
   * Policy version 3.9.4: no changes required.
   * Run the upstream test suite.
 
- -- Colin Watson <cjwatson@ubuntu.com>  Fri, 21 Sep 2012 17:52:48 +0100
+ -- Colin Watson <cjwatson@debian.org>  Fri, 21 Sep 2012 22:53:29 +0100
 
 six (1.1.0-2) unstable; urgency=low
 
