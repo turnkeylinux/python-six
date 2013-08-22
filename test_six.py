@@ -104,6 +104,13 @@ def test_filter():
     assert six.advance_iterator(f) == 1
 
 
+def test_filter_false():
+    from six.moves import filterfalse
+    f = filterfalse(lambda x: x % 3, range(10))
+    assert six.advance_iterator(f) == 0
+    assert six.advance_iterator(f) == 3
+    assert six.advance_iterator(f) == 6
+
 def test_map():
     from six.moves import map
     assert six.advance_iterator(map(lambda x: x + 1, range(2))) == 1
@@ -112,6 +119,14 @@ def test_map():
 def test_zip():
     from six.moves import zip
     assert six.advance_iterator(zip(range(2), range(2))) == (0, 0)
+
+
+def test_zip_longest():
+    from six.moves import zip_longest
+    it = zip_longest(range(2), range(1))
+
+    assert six.advance_iterator(it) == (0, 0)
+    assert six.advance_iterator(it) == (1, None)
 
 
 class TestCustomizedMoves:
