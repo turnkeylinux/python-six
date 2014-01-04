@@ -59,11 +59,9 @@ def test_MAXSIZE():
     except AttributeError:
         # Before Python 2.6.
         pass
-    if sys.version_info[:2] == (2, 4):
-        exc = ValueError
-    else:
-        exc = OverflowError
-    py.test.raises(exc, operator.mul, [None], six.MAXSIZE + 1)
+    py.test.raises(
+        (ValueError, OverflowError),
+        operator.mul, [None], six.MAXSIZE + 1)
 
 
 def test_lazy():
@@ -84,6 +82,15 @@ except ImportError:
 else:
     have_tkinter = True
 
+have_gdbm = True
+try:
+    import gdbm
+except ImportError:
+    try:
+        import dbm.gnu
+    except ImportError:
+        have_gdbm = False
+
 @py.test.mark.parametrize("item_name",
                           [item.name for item in six._moved_attributes])
 def test_move_items(item_name):
@@ -96,9 +103,15 @@ def test_move_items(item_name):
     except ImportError:
         if item_name == "winreg" and not sys.platform.startswith("win"):
             py.test.skip("Windows only module")
-        if item_name.startswith("tkinter") and not have_tkinter:
-            py.test.skip("requires tkinter")
+        if item_name.startswith("tkinter"):
+            if not have_tkinter:
+                py.test.skip("requires tkinter")
+            if item_name == "tkinter_ttk" and sys.version_info <= (2, 6):
+                py.test.skip("ttk only available on 2.7+")
+        if item_name.startswith("dbm_gnu") and not have_gdbm:
+            py.test.skip("requires gdbm")
         raise
+    assert item_name in dir(six.moves)
 
 
 @py.test.mark.parametrize("item_name",
@@ -109,6 +122,8 @@ def test_move_items_urllib_parse(item_name):
         py.test.skip("ParseResult is only found on 2.5+")
     if item_name in ("parse_qs", "parse_qsl") and sys.version_info < (2, 6):
         py.test.skip("parse_qs[l] is new in 2.6")
+    if sys.version_info[:2] >= (2, 6):
+        assert item_name in dir(six.moves.urllib.parse)
     getattr(six.moves.urllib.parse, item_name)
 
 
@@ -116,6 +131,8 @@ def test_move_items_urllib_parse(item_name):
                           [item.name for item in six._urllib_error_moved_attributes])
 def test_move_items_urllib_error(item_name):
     """Ensure that everything loads correctly."""
+    if sys.version_info[:2] >= (2, 6):
+        assert item_name in dir(six.moves.urllib.error)
     getattr(six.moves.urllib.error, item_name)
 
 
@@ -123,6 +140,8 @@ def test_move_items_urllib_error(item_name):
                           [item.name for item in six._urllib_request_moved_attributes])
 def test_move_items_urllib_request(item_name):
     """Ensure that everything loads correctly."""
+    if sys.version_info[:2] >= (2, 6):
+        assert item_name in dir(six.moves.urllib.request)
     getattr(six.moves.urllib.request, item_name)
 
 
@@ -130,6 +149,8 @@ def test_move_items_urllib_request(item_name):
                           [item.name for item in six._urllib_response_moved_attributes])
 def test_move_items_urllib_response(item_name):
     """Ensure that everything loads correctly."""
+    if sys.version_info[:2] >= (2, 6):
+        assert item_name in dir(six.moves.urllib.response)
     getattr(six.moves.urllib.response, item_name)
 
 
@@ -137,6 +158,8 @@ def test_move_items_urllib_response(item_name):
                           [item.name for item in six._urllib_robotparser_moved_attributes])
 def test_move_items_urllib_robotparser(item_name):
     """Ensure that everything loads correctly."""
+    if sys.version_info[:2] >= (2, 6):
+        assert item_name in dir(six.moves.urllib.robotparser)
     getattr(six.moves.urllib.robotparser, item_name)
 
 
@@ -405,9 +428,9 @@ if six.PY3:
 
 
     def test_u():
-        s = six.u("hi")
+        s = six.u("hi \u0439 \U00000439 \\ \\\\ \n")
         assert isinstance(s, str)
-        assert s == "hi"
+        assert s == "hi \u0439 \U00000439 \\ \\\\ \n"
 
 else:
 
@@ -419,9 +442,9 @@ else:
 
 
     def test_u():
-        s = six.u("hi")
+        s = six.u("hi \u0439 \U00000439 \\ \\\\ \n")
         assert isinstance(s, unicode)
-        assert s == "hi"
+        assert s == "hi \xd0\xb9 \xd0\xb9 \\ \\\\ \n".decode("utf8")
 
 
 def test_u_escapes():
@@ -641,7 +664,7 @@ def test_add_metaclass():
     assert instance.b == Base.b
     assert instance.x == X.x
 
-    # test a class with slots
+    # Test a class with slots.
     class MySlots(object):
         __slots__ = ["a", "b"]
     MySlots = six.add_metaclass(Meta1)(MySlots)
@@ -650,3 +673,14 @@ def test_add_metaclass():
     instance = MySlots()
     instance.a = "foo"
     py.test.raises(AttributeError, setattr, instance, "c", "baz")
+
+    # Test a class with string for slots.
+    class MyStringSlots(object):
+        __slots__ = "ab"
+    MyStringSlots = six.add_metaclass(Meta1)(MyStringSlots)
+    assert MyStringSlots.__slots__ == "ab"
+    instance = MyStringSlots()
+    instance.ab = "foo"
+    py.test.raises(AttributeError, setattr, instance, "a", "baz")
+    py.test.raises(AttributeError, setattr, instance, "b", "baz")
+
