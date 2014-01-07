@@ -3,7 +3,7 @@ Upstream-Name: six
 Source: http://pypi.python.org/pypi/six/
 
 Files: *
-Copyright: Copyright (c) 2010-2013 Benjamin Peterson
+Copyright: Copyright (c) 2010-2014 Benjamin Peterson
 License: Expat
 
 Files: debian/*
