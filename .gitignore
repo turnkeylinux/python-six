@@ -1,5 +1,5 @@
 __pycache__
-./build
+/build
 debian/files
 debian/python-six
 debian/python3-six
