@@ -1,10 +1,10 @@
-six (1.5.2-1) UNRELEASED; urgency=medium
+six (1.5.2-1) unstable; urgency=medium
 
   * New upstream release.
   * Switch to git; adjust Vcs-* fields.
   * Policy version 3.9.5: no changes required.
 
- -- Colin Watson <cjwatson@debian.org>  Tue, 07 Jan 2014 00:35:08 +0000
+ -- Colin Watson <cjwatson@debian.org>  Tue, 07 Jan 2014 01:00:45 +0000
 
 six (1.4.1-1) unstable; urgency=low
 
