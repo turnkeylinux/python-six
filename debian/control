@@ -5,8 +5,8 @@ Maintainer: Colin Watson <cjwatson@debian.org>
 Standards-Version: 3.9.5
 Build-Depends: debhelper (>= 7.2.11~), python (>= 2.6.6-3~), python-all, python3 (>= 3.1.2-8~), python3-all, python-pytest, python3-pytest
 Homepage: http://pythonhosted.org/six/
-Vcs-Git: git://anonscm.debian.org/users/cjwatson/six.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=users/cjwatson/six.git
+Vcs-Git: git://anonscm.debian.org/collab-maint/six.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/six.git
 X-Python-Version: >= 2.5
 X-Python3-Version: >= 3.0
 
