@@ -1,8 +1,21 @@
 six (1.6.1-2) UNRELEASED; urgency=medium
 
+  [ Colin Watson ]
   * Move git repository to collab-maint.
 
- -- Colin Watson <cjwatson@ubuntu.com>  Thu, 20 Mar 2014 00:04:41 +0000
+  [ Barry Warsaw ]
+  * d/control:
+    - Added python-setuptools, python3-setuptools, python3-wheel, and
+      dh-python to Build-Depends.
+    - Added python-six-wheels binary package.
+    - Added myself to Uploaders with maintainer's permission.
+  * d/rules:
+    - Use --buildsystem=pybuild and simplify.
+    - Build the universal wheels.
+  * d/python-six-wheels.install: Added.
+  * d/python{,3}-six.install: Unnecessary for pybuild; removed.
+
+ -- Barry Warsaw <barry@debian.org>  Mon, 19 May 2014 18:04:58 -0400
 
 six (1.6.1-1) unstable; urgency=medium
 
