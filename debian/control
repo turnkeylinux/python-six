@@ -35,7 +35,7 @@ Description: Python 2 and 3 compatibility library (Python 3 interface)
  This package provides Six on the Python 3 module path. It is complemented
  by python-six.
 
-Package: python-six-wheels
+Package: python-six-whl
 Architecture: all
 Depends: ${misc:Depends}, ${python3:Depends}
 Description: Python 2 and 3 compatibility library (universal wheels)

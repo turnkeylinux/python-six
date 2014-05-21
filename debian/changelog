@@ -7,12 +7,12 @@ six (1.6.1-2) UNRELEASED; urgency=medium
   * d/control:
     - Added python-setuptools, python3-setuptools, python3-wheel, and
       dh-python to Build-Depends.
-    - Added python-six-wheels binary package.
+    - Added python-six-whl binary package.
     - Added myself to Uploaders with maintainer's permission.
   * d/rules:
     - Use --buildsystem=pybuild and simplify.
     - Build the universal wheels.
-  * d/python-six-wheels.install: Added.
+  * d/python-six-whl.install: Added.
   * d/python{,3}-six.install: Unnecessary for pybuild; removed.
 
  -- Barry Warsaw <barry@debian.org>  Mon, 19 May 2014 18:04:58 -0400
