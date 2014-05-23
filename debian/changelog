@@ -1,3 +1,10 @@
+six (1.6.1-3) UNRELEASED; urgency=medium
+
+  * Adjust python-six-whl's short description to say "wheel", not "wheels"
+    (thanks, Scott Kitterman).
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 23 May 2014 23:02:50 +0100
+
 six (1.6.1-2) unstable; urgency=medium
 
   [ Colin Watson ]
