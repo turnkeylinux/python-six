@@ -44,4 +44,4 @@ Description: Python 2 and 3 compatibility library (universal wheels)
  with the goal of writing Python code that is compatible on both Python
  versions.
  .
- This package provides Six as universal wheels.
+ This package provides Six as a universal wheel.
