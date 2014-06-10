@@ -1,5 +1,6 @@
-six (1.6.1-3) UNRELEASED; urgency=medium
+six (1.7.2-1) UNRELEASED; urgency=medium
 
+  * New upstream release.
   * Adjust python-six-whl's short description to say "wheel", not "wheels"
     (thanks, Scott Kitterman).
 
