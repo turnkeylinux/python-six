@@ -1,6 +1,8 @@
 six (1.7.2-1~bpo70+1) wheezy-backports; urgency=medium
 
   * Rebuild for wheezy-backports.
+  * Disable wheel support for wheezy-backports, as python3-wheel is not
+    available.
 
  -- Colin Watson <cjwatson@debian.org>  Mon, 16 Jun 2014 17:58:40 +0100
 
