@@ -1,8 +1,35 @@
-six (1.6.1-1~bpo70+1) wheezy-backports; urgency=medium
+six (1.7.2-1~bpo70+1) wheezy-backports; urgency=medium
 
   * Rebuild for wheezy-backports.
 
- -- Colin Watson <cjwatson@debian.org>  Sun, 13 Apr 2014 17:38:23 +0100
+ -- Colin Watson <cjwatson@debian.org>  Mon, 16 Jun 2014 17:58:40 +0100
+
+six (1.7.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Adjust python-six-whl's short description to say "wheel", not "wheels"
+    (thanks, Scott Kitterman).
+
+ -- Colin Watson <cjwatson@debian.org>  Tue, 10 Jun 2014 19:58:27 +0100
+
+six (1.6.1-2) unstable; urgency=medium
+
+  [ Colin Watson ]
+  * Move git repository to collab-maint.
+
+  [ Barry Warsaw ]
+  * d/control:
+    - Added python-setuptools, python3-setuptools, python3-wheel, and
+      dh-python to Build-Depends.
+    - Added python-six-whl binary package.
+    - Added myself to Uploaders with maintainer's permission.
+  * d/rules:
+    - Use --buildsystem=pybuild and simplify.
+    - Build the universal wheel.
+  * d/python-six-whl.install: Added.
+  * d/python{,3}-six.install: Unnecessary for pybuild; removed.
+
+ -- Barry Warsaw <barry@debian.org>  Fri, 23 May 2014 10:46:07 -0400
 
 six (1.6.1-1) unstable; urgency=medium
 
