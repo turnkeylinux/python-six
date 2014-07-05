@@ -1,10 +1,16 @@
-six (1.7.2-1~bpo70+1) wheezy-backports; urgency=medium
+six (1.7.3-1~bpo70+1) wheezy-backports; urgency=medium
 
   * Rebuild for wheezy-backports.
   * Disable wheel support for wheezy-backports, as python3-wheel is not
     available.
 
- -- Colin Watson <cjwatson@debian.org>  Mon, 16 Jun 2014 17:58:40 +0100
+ -- Colin Watson <cjwatson@debian.org>  Sat, 05 Jul 2014 17:45:43 +0100
+
+six (1.7.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 30 Jun 2014 02:45:16 +0100
 
 six (1.7.2-1) unstable; urgency=medium
 
