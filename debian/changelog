@@ -1,6 +1,8 @@
 six (1.7.3-2) UNRELEASED; urgency=medium
 
   * Mark all binary packages Multi-Arch: foreign.
+  * Tell pybuild to copy tests into build directory for the duration of the
+    test phase, so that pytest can run them (closes: #759490).
 
  -- Colin Watson <cjwatson@debian.org>  Sat, 30 Aug 2014 15:41:49 +0100
 
