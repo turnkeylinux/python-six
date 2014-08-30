@@ -13,6 +13,7 @@ X-Python3-Version: >= 3.0
 
 Package: python-six
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}, ${python:Depends}
 Description: Python 2 and 3 compatibility library (Python 2 interface)
  Six is a Python 2 and 3 compatibility library. It provides utility
@@ -25,6 +26,7 @@ Description: Python 2 and 3 compatibility library (Python 2 interface)
 
 Package: python3-six
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}, ${python3:Depends}
 Description: Python 2 and 3 compatibility library (Python 3 interface)
  Six is a Python 2 and 3 compatibility library. It provides utility
@@ -37,6 +39,7 @@ Description: Python 2 and 3 compatibility library (Python 3 interface)
 
 Package: python-six-whl
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}, ${python3:Depends}
 Description: Python 2 and 3 compatibility library (universal wheel)
  Six is a Python 2 and 3 compatibility library. It provides utility
