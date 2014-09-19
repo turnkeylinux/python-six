@@ -1,10 +1,27 @@
-six (1.7.3-1~bpo70+1) wheezy-backports; urgency=medium
+six (1.8.0-1~bpo70+1) wheezy-backports; urgency=medium
 
   * Rebuild for wheezy-backports.
   * Disable wheel support for wheezy-backports, as python3-wheel is not
     available.
 
- -- Colin Watson <cjwatson@debian.org>  Sat, 05 Jul 2014 17:45:43 +0100
+ -- Colin Watson <cjwatson@debian.org>  Fri, 19 Sep 2014 12:07:18 +0100
+
+six (1.8.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 12 Sep 2014 11:02:06 +0100
+
+six (1.7.3-2) unstable; urgency=medium
+
+  * Mark all binary packages Multi-Arch: foreign.
+  * Tell pybuild to copy tests into build directory for the duration of the
+    test phase, so that pytest can run them (closes: #759490).
+  * Build-depend on python-py and python3-py for the test suite; this is
+    currently redundant since python-pytest and python3-pytest depend on
+    these, but it's a good idea for future-proofing.
+
+ -- Colin Watson <cjwatson@debian.org>  Sat, 30 Aug 2014 16:01:37 +0100
 
 six (1.7.3-1) unstable; urgency=medium
 
