@@ -18,7 +18,7 @@ tracker and code hosting is on `BitBucket <http://bitbucket.org/gutworth/six>`_.
 
 The name, "six", comes from the fact that 2*3 equals 6.  Why not addition?
 Multiplication is more powerful, and, anyway, "five" has already been snatched
-away by the Zope Five project.
+away by the (admittedly now moribund) Zope Five project.
 
 
 Indices and tables
@@ -160,7 +160,7 @@ functions and methods is the stdlib :mod:`py3:inspect` module.
 
 
 .. function:: next(it)
-.. function:: advance_iterator(it)
+              advance_iterator(it)
 
    Get the next item of iterator *it*.  :exc:`py3:StopIteration` is raised if
    the iterator is exhausted.  This is a replacement for calling ``it.next()``
@@ -201,6 +201,27 @@ functions and methods is the stdlib :mod:`py3:inspect` module.
    intended for use with multi-valued dictionaries like `Werkzeug's
    <http://werkzeug.pocoo.org/docs/datastructures/#werkzeug.datastructures.MultiDict>`_.
    *kwargs* are passed through to the underlying method.
+
+
+.. function:: viewkeys(dictionary)
+
+   Return a view over *dictionary*\'s keys. This replaces
+   :meth:`py2:dict.viewkeys` on Python 2.7 and :meth:`py3:dict.keys` on
+   Python 3.
+
+
+.. function:: viewvalues(dictionary)
+
+   Return a view over *dictionary*\'s values. This replaces
+   :meth:`py2:dict.viewvalues` on Python 2.7 and :meth:`py3:dict.values` on
+   Python 3.
+
+
+.. function:: viewitems(dictionary)
+
+   Return a view over *dictionary*\'s items. This replaces
+   :meth:`py2:dict.viewitems` on Python 2.7 and :meth:`py3:dict.items` on
+   Python 3.
 
 
 .. function:: create_bound_method(func, obj)
@@ -259,6 +280,13 @@ Python 2 and 3.
       In Python 2, this function imitates Python 3's :func:`py3:print` by not
       having softspace support.  If you don't know what that is, you're probably
       ok. :)
+
+
+.. function:: raise_from(exc_value, exc_value_from)
+
+   Raise an exception from a context.  On Python 3, this is equivalent to
+   ``raise exc_value from exc_value_from``.  On Python 2, which does not support
+   exception chaining, it is equivalent to ``raise exc_value``.
 
 
 .. function:: reraise(exc_type, exc_value, exc_traceback=None)
@@ -407,6 +435,38 @@ string data in all Python versions.
    This is a fake file object for binary data.  In Python 2, it's an alias for
    :class:`py2:StringIO.StringIO`, but in Python 3, it's an alias for
    :class:`py3:io.BytesIO`.
+
+
+unittest assertions
+>>>>>>>>>>>>>>>>>>>
+
+Six contains compatibility shims for unittest assertions that have been renamed.
+The parameters are the same as their aliases, but you must pass the test method
+as the first argument. For example::
+
+    import six
+    import unittest
+
+    class TestAssertCountEqual(unittest.TestCase):
+        def test(self):
+            six.assertCountEqual(self, (1, 2), [2, 1])
+
+
+.. function:: assertCountEqual()
+
+   Alias for :meth:`~py3:unittest.TestCase.assertCountEqual` on Python 3 and
+   :meth:`~py2:unittest.TestCase.assertItemsEqual` on Python 2.  This method is
+   only available on Python 2.7 and later.
+
+.. function:: assertRaisesRegex()
+
+   Alias for :meth:`~py3:unittest.TestCase.assertRaisesRegex` on Python 3 and
+   :meth:`~py2:unittest.TestCase.assertRaisesRegexp` on Python 2.
+
+.. function:: assertRegex()
+
+   Alias for :meth:`~py3:unittest.TestCase.assertRegex` on Python 3 and
+   :meth:`~py2:unittest.TestCase.assertRegexpMatches` on Python 2.
 
 
 Renamed modules and attributes compatibility

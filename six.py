@@ -23,6 +23,7 @@
 from __future__ import absolute_import
 
 import functools
+import itertools
 import operator
 import sys
 import types
@@ -88,8 +89,12 @@ class _LazyDescr(object):
     def __get__(self, obj, tp):
         result = self._resolve()
         setattr(obj, self.name, result) # Invokes __set__.
-        # This is a bit ugly, but it avoids running this again.
-        delattr(obj.__class__, self.name)
+        try:
+            # This is a bit ugly, but it avoids running this again by
+            # removing this descriptor.
+            delattr(obj.__class__, self.name)
+        except AttributeError:
+            pass
         return result
 
 
@@ -554,6 +559,12 @@ if PY3:
 
     def iterlists(d, **kw):
         return iter(d.lists(**kw))
+
+    viewkeys = operator.methodcaller("keys")
+
+    viewvalues = operator.methodcaller("values")
+
+    viewitems = operator.methodcaller("items")
 else:
     def iterkeys(d, **kw):
         return iter(d.iterkeys(**kw))
@@ -566,6 +577,12 @@ else:
 
     def iterlists(d, **kw):
         return iter(d.iterlists(**kw))
+
+    viewkeys = operator.methodcaller("viewkeys")
+
+    viewvalues = operator.methodcaller("viewvalues")
+
+    viewitems = operator.methodcaller("viewitems")
 
 _add_doc(iterkeys, "Return an iterator over the keys of a dictionary.")
 _add_doc(itervalues, "Return an iterator over the values of a dictionary.")
@@ -593,6 +610,9 @@ if PY3:
     import io
     StringIO = io.StringIO
     BytesIO = io.BytesIO
+    _assertCountEqual = "assertCountEqual"
+    _assertRaisesRegex = "assertRaisesRegex"
+    _assertRegex = "assertRegex"
 else:
     def b(s):
         return s
@@ -605,12 +625,26 @@ else:
         return ord(bs[0])
     def indexbytes(buf, i):
         return ord(buf[i])
-    def iterbytes(buf):
-        return (ord(byte) for byte in buf)
+    iterbytes = functools.partial(itertools.imap, ord)
     import StringIO
     StringIO = BytesIO = StringIO.StringIO
+    _assertCountEqual = "assertItemsEqual"
+    _assertRaisesRegex = "assertRaisesRegexp"
+    _assertRegex = "assertRegexpMatches"
 _add_doc(b, """Byte literal""")
 _add_doc(u, """Text literal""")
+
+
+def assertCountEqual(self, *args, **kwargs):
+    return getattr(self, _assertCountEqual)(*args, **kwargs)
+
+
+def assertRaisesRegex(self, *args, **kwargs):
+    return getattr(self, _assertRaisesRegex)(*args, **kwargs)
+
+
+def assertRegex(self, *args, **kwargs):
+    return getattr(self, _assertRegex)(*args, **kwargs)
 
 
 if PY3:
@@ -641,6 +675,15 @@ else:
     exec_("""def reraise(tp, value, tb=None):
     raise tp, value, tb
 """)
+
+
+if sys.version_info > (3, 2):
+    exec_("""def raise_from(value, from_value):
+    raise value from from_value
+""")
+else:
+    def raise_from(value, from_value):
+        raise value
 
 
 print_ = getattr(moves.builtins, "print", None)
@@ -704,7 +747,7 @@ if sys.version_info[0:2] < (3, 4):
     def wraps(wrapped, assigned=functools.WRAPPER_ASSIGNMENTS,
               updated=functools.WRAPPER_UPDATES):
         def wrapper(f):
-            f = functools.wraps(wrapped)(f)
+            f = functools.wraps(wrapped, assigned, updated)(f)
             f.__wrapped__ = wrapped
             return f
         return wrapper
