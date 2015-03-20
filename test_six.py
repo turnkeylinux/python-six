@@ -390,7 +390,7 @@ def test_dictionary_iterators(monkeypatch):
         monkeypatch.undo()
 
 
-@py.test.mark.skipif(sys.version_info[:2] < (2, 7),
+@py.test.mark.skipif("sys.version_info[:2] < (2, 7)",
                 reason="view methods on dictionaries only available on 2.7+")
 def test_dictionary_views():
     def stock_method_name(viewwhat):
@@ -454,6 +454,20 @@ def test_create_bound_method():
     b = six.create_bound_method(f, x)
     assert isinstance(b, types.MethodType)
     assert b() is x
+
+
+def test_create_unbound_method():
+    class X(object):
+        pass
+
+    def f(self):
+        return self
+    u = six.create_unbound_method(f, X)
+    py.test.raises(TypeError, u)
+    if six.PY2:
+        assert isinstance(u, types.MethodType)
+    x = X()
+    assert f(x) is x
 
 
 if six.PY3:
@@ -799,7 +813,7 @@ def test_add_metaclass():
     assert type(MySlotsWeakref) is Meta
 
 
-@py.test.mark.skipif("sys.version_info[:2] < (2, 7)")
+@py.test.mark.skipif("sys.version_info[:2] < (2, 7) or sys.version_info[:2] in ((3, 0), (3, 1))")
 def test_assertCountEqual():
     class TestAssertCountEqual(unittest.TestCase):
         def test(self):
