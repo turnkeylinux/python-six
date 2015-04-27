@@ -3,7 +3,6 @@ Section: python
 Priority: optional
 Maintainer: Colin Watson <cjwatson@debian.org>
 Uploaders: Barry Warsaw <barry@debian.org>,
-Standards-Version: 3.9.5
 Build-Depends: debhelper (>= 7.2.11~),
                dh-python,
                python (>= 2.6.6-3~),
@@ -17,11 +16,10 @@ Build-Depends: debhelper (>= 7.2.11~),
                python3-pytest,
                python3-setuptools,
                python3-wheel,
-Homepage: http://pythonhosted.org/six/
+Standards-Version: 3.9.5
 Vcs-Git: git://anonscm.debian.org/collab-maint/six.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/six.git
-X-Python-Version: >= 2.5
-X-Python3-Version: >= 3.0
+Homepage: http://pythonhosted.org/six/
 
 Package: python-six
 Architecture: all
