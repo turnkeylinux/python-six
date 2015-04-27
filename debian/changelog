@@ -5,6 +5,7 @@ six (1.9.0-2) unstable; urgency=medium
   * Uploading to unstable.
   * Dropped X-Python fields which are referencing ancient versions of
     Python.
+  * Standards-Version: 3.9.6 (no changes).
 
  -- Thomas Goirand <zigo@debian.org>  Mon, 27 Apr 2015 08:05:43 +0000
 
