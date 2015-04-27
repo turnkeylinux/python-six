@@ -1,3 +1,10 @@
+six (1.9.0-3) unstable; urgency=medium
+
+  * d/control: Restore X-Python*-Version headers to more modern values.
+  * d/watch: Update to use pypi.debian.net mirror.
+
+ -- Barry Warsaw <barry@debian.org>  Mon, 27 Apr 2015 09:52:45 -0400
+
 six (1.9.0-2) unstable; urgency=medium
 
   * Team upload.
