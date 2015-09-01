@@ -6,3 +6,6 @@
 six_1.9.0.orig.tar.gz
 d168e6d01f0900875c6ecebc97da72d0fda31129
 29127
+debianTag="debian/%e%v"
+patchedTag="patched/%e%v"
+upstreamTag="upstream/%e%u"
