@@ -1,3 +1,10 @@
+six (1.9.0-4) UNRELEASED; urgency=medium
+
+  * d/rules: Add PYBUILD_TEST_ARGS enabling --assert=plain to avoid ast
+    rewriting bug in pytest with Python 3.5.
+
+ -- Barry Warsaw <barry@debian.org>  Tue, 01 Sep 2015 18:36:35 -0400
+
 six (1.9.0-3) unstable; urgency=medium
 
   * d/control: Restore X-Python*-Version headers to more modern values.
