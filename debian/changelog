@@ -1,4 +1,4 @@
-six (1.9.0-4) UNRELEASED; urgency=medium
+six (1.9.0-4) unstable; urgency=medium
 
   * d/rules: Add PYBUILD_TEST_ARGS enabling --assert=plain to avoid ast
     rewriting bug in pytest with Python 3.5.
