@@ -1,3 +1,10 @@
+six (1.9.0-5) UNRELEASED; urgency=medium
+
+  * Revert previous change to debian/rules file.  It seems to be
+    unnecessary after all.
+
+ -- Barry Warsaw <barry@debian.org>  Wed, 02 Sep 2015 09:35:49 -0400
+
 six (1.9.0-4) unstable; urgency=medium
 
   * d/rules: Add PYBUILD_TEST_ARGS enabling --assert=plain to avoid ast
