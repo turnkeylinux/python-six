@@ -1,9 +1,9 @@
-six (1.9.0-5) UNRELEASED; urgency=medium
+six (1.9.0-5) unstable; urgency=medium
 
   * Revert previous change to debian/rules file.  It seems to be
     unnecessary after all.
 
- -- Barry Warsaw <barry@debian.org>  Wed, 02 Sep 2015 09:35:49 -0400
+ -- Barry Warsaw <barry@debian.org>  Wed, 02 Sep 2015 10:22:41 -0400
 
 six (1.9.0-4) unstable; urgency=medium
 
