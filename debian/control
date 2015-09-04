@@ -5,6 +5,8 @@ Maintainer: Colin Watson <cjwatson@debian.org>
 Uploaders: Barry Warsaw <barry@debian.org>,
 Build-Depends: debhelper (>= 7.2.11~),
                dh-python,
+               pypy,
+               pypy-setuptools,
                python (>= 2.6.6-3~),
                python-all,
                python-py,
@@ -35,7 +37,7 @@ Description: Python 2 and 3 compatibility library (Python 2 interface)
  versions.
  .
  This package provides Six on the Python 2 module path. It is complemented
- by python3-six.
+ by python3-six and pypy-six.
 
 Package: python3-six
 Architecture: all
@@ -49,7 +51,21 @@ Description: Python 2 and 3 compatibility library (Python 3 interface)
  versions.
  .
  This package provides Six on the Python 3 module path. It is complemented
- by python-six.
+ by python-six and pypy-six.
+
+Package: pypy-six
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${pypy:Depends},
+Description: Python 2 and 3 compatibility library (PyPy interface)
+ Six is a Python 2 and 3 compatibility library. It provides utility
+ functions for smoothing over the differences between the Python versions
+ with the goal of writing Python code that is compatible on both Python
+ versions.
+ .
+ This package provides Six on the PyPy module path. It is complemented
+ by python-six and python3-six.
 
 Package: python-six-whl
 Architecture: all
