@@ -3,6 +3,7 @@ six (1.9.0-6) UNRELEASED; urgency=medium
   * Team upload.
   * d/control: Add pypy-six package.
   * d/rules: Add --with pypy.
+  * d/python{,3}-six.pydist: Add pydist files.
 
  -- Tristan Seligmann <mithrandi@debian.org>  Fri, 04 Sep 2015 09:38:19 +0200
 
