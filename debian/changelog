@@ -1,4 +1,4 @@
-six (1.10.0-1) UNRELEASED; urgency=medium
+six (1.10.0-1) unstable; urgency=medium
 
   [ Tristan Seligmann ]
   * d/control: Add pypy-six package.
@@ -8,7 +8,7 @@ six (1.10.0-1) UNRELEASED; urgency=medium
   [ Colin Watson ]
   * New upstream release.
 
- -- Colin Watson <cjwatson@debian.org>  Wed, 07 Oct 2015 22:49:20 +0100
+ -- Colin Watson <cjwatson@debian.org>  Wed, 07 Oct 2015 22:50:40 +0100
 
 six (1.9.0-5) unstable; urgency=medium
 
