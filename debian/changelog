@@ -1,9 +1,9 @@
-six (1.10.0-2) UNRELEASED; urgency=medium
+six (1.10.0-2) unstable; urgency=medium
 
   * Use HTTPS for Vcs-* URLs, and link to cgit rather than gitweb.
   * Upgrade to debhelper v9.
 
- -- Colin Watson <cjwatson@debian.org>  Wed, 27 Jan 2016 13:39:14 +0000
+ -- Colin Watson <cjwatson@debian.org>  Wed, 27 Jan 2016 13:42:43 +0000
 
 six (1.10.0-1) unstable; urgency=medium
 
