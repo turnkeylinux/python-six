@@ -12,10 +12,3 @@ export PYBUILD_DISABLE_pypy := test
 
 %:
 	dh $@ --with python2,python3,pypy --buildsystem=pybuild
-
-
-override_dh_auto_install:
-	dh_auto_install
-	python3 setup.py bdist_wheel \
-		--universal \
-		-d $(CURDIR)/debian/tmp/usr/share/python-wheels

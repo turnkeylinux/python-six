@@ -1,3 +1,16 @@
+six (1.10.0-3) UNRELEASED; urgency=medium
+
+  * d/control:
+    - Drop the python-six-whl binary package as it's no longer necessary.
+      (Closes: #814069)
+    - Drop the Build-Depends on python3-wheel.
+  * d/rules: Drop override_dh_auto_install since we no longer need to
+    build the .whl.
+  * d/python-six-whl.install: Removed.
+  * d/tests: Add simple import smoke tests.
+
+ -- Barry Warsaw <barry@debian.org>  Mon, 08 Feb 2016 15:08:42 -0500
+
 six (1.10.0-2) unstable; urgency=medium
 
   * Use HTTPS for Vcs-* URLs, and link to cgit rather than gitweb.
