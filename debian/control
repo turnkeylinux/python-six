@@ -18,7 +18,7 @@ Build-Depends: debhelper (>= 9),
                python3-py,
                python3-pytest,
                python3-setuptools,
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 X-Python-Version: >= 2.7
 X-Python3-Version: >= 3.4
 Vcs-Git: https://anonscm.debian.org/git/collab-maint/six.git

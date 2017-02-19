@@ -2,6 +2,7 @@ six (1.10.0-4) UNRELEASED; urgency=medium
 
   * Build Sphinx documentation in a new python-six-doc binary package
     (closes: #855492).
+  * Policy version 3.9.8: no changes required.
 
  -- Colin Watson <cjwatson@debian.org>  Sun, 19 Feb 2017 15:57:13 +0000
 
