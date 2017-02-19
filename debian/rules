@@ -11,4 +11,12 @@ export PYBUILD_DISABLE_pypy := test
 
 
 %:
-	dh $@ --with python2,python3,pypy --buildsystem=pybuild
+	dh $@ --with python2,python3,pypy,sphinxdoc --buildsystem=pybuild
+
+override_dh_auto_build:
+	dh_auto_build
+	$(MAKE) -C documentation html
+
+override_dh_auto_clean:
+	dh_auto_clean
+	$(MAKE) -C documentation clean

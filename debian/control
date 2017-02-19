@@ -12,6 +12,7 @@ Build-Depends: debhelper (>= 9),
                python-py,
                python-pytest,
                python-setuptools,
+               python-sphinx | python3-sphinx,
                python3 (>= 3.1.2-8~),
                python3-all,
                python3-py,
@@ -65,3 +66,18 @@ Description: Python 2 and 3 compatibility library (PyPy interface)
  .
  This package provides Six on the PyPy module path. It is complemented
  by python-six and python3-six.
+
+Package: python-six-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${sphinxdoc:Depends},
+Built-Using: ${sphinxdoc:Built-Using}
+Description: Python 2 and 3 compatibility library (documentation)
+ Six is a Python 2 and 3 compatibility library. It provides utility
+ functions for smoothing over the differences between the Python versions
+ with the goal of writing Python code that is compatible on both Python
+ versions.
+ .
+ This package provides the documentation for Six.
