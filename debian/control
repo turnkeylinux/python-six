@@ -23,7 +23,7 @@ X-Python-Version: >= 2.7
 X-Python3-Version: >= 3.4
 Vcs-Git: https://anonscm.debian.org/git/collab-maint/six.git
 Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/six.git
-Homepage: https://pythonhosted.org/six/
+Homepage: https://pypi.python.org/pypi/six
 
 Package: python-six
 Architecture: all
