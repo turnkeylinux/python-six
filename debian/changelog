@@ -1,6 +1,8 @@
 six (1.11.0-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Build-depend only on python3-sphinx rather than accepting python-sphinx
+    as an alternative.
 
  -- Colin Watson <cjwatson@debian.org>  Fri, 22 Sep 2017 10:38:19 +0100
 
