@@ -15,7 +15,9 @@ export PYBUILD_DISABLE_pypy := test
 
 override_dh_auto_build:
 	dh_auto_build
+ifeq (,$(filter nodoc,$(DEB_BUILD_OPTIONS)))
 	$(MAKE) -C documentation html
+endif
 
 override_dh_auto_clean:
 	dh_auto_clean

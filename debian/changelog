@@ -4,6 +4,7 @@ six (1.11.0-1) UNRELEASED; urgency=medium
   * Build-depend only on python3-sphinx rather than accepting python-sphinx
     as an alternative.
   * Use HTTPS form of copyright-format URL.
+  * Support DEB_BUILD_OPTIONS=nodoc.
 
  -- Colin Watson <cjwatson@debian.org>  Fri, 22 Sep 2017 10:38:19 +0100
 
