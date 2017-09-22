@@ -5,6 +5,7 @@ six (1.11.0-1) UNRELEASED; urgency=medium
     as an alternative.
   * Use HTTPS form of copyright-format URL.
   * Support DEB_BUILD_OPTIONS=nodoc.
+  * Policy version 4.1.0.
 
  -- Colin Watson <cjwatson@debian.org>  Fri, 22 Sep 2017 10:38:19 +0100
 
