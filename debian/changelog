@@ -1,6 +1,7 @@
 six (1.11.0-2) UNRELEASED; urgency=medium
 
   * Move VCS to salsa.debian.org.
+  * Switch Maintainer to the Debian Python Modules Team.
 
  -- Colin Watson <cjwatson@debian.org>  Fri, 09 Feb 2018 18:45:06 +0000
 
