@@ -3,6 +3,7 @@ six (1.11.0-3) UNRELEASED; urgency=medium
   * d/watch: Use https protocol
   * d/control: Remove ancient X-Python-Version field
   * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
 
  -- Ondřej Nový <onovy@debian.org>  Thu, 15 Feb 2018 08:36:57 +0100
 
