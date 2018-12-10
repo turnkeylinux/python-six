@@ -1,4 +1,4 @@
-six (1.12.0-1) UNRELEASED; urgency=medium
+six (1.12.0-1) unstable; urgency=medium
 
   [ Ondřej Nový ]
   * d/watch: Use https protocol
@@ -9,7 +9,7 @@ six (1.12.0-1) UNRELEASED; urgency=medium
   [ Colin Watson ]
   * New upstream release.
 
- -- Ondřej Nový <onovy@debian.org>  Thu, 15 Feb 2018 08:36:57 +0100
+ -- Colin Watson <cjwatson@debian.org>  Mon, 10 Dec 2018 10:47:02 +0000
 
 six (1.11.0-2) unstable; urgency=medium
 
