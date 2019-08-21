@@ -1,3 +1,5 @@
 Test-Command: python -c "import six; print six.__version__"
+Restrictions: superficial
 
 Test-Command: python3 -c "import six; print(six.__version__)"
+Restrictions: superficial

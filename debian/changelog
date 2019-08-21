@@ -1,6 +1,10 @@
 six (1.12.0-2) UNRELEASED; urgency=medium
 
+  [ Ondřej Nový ]
   * Use debhelper-compat instead of debian/compat.
+
+  [ Colin Watson ]
+  * Mark autopkgtests as superficial.
 
  -- Ondřej Nový <onovy@debian.org>  Fri, 19 Jul 2019 23:46:14 +0200
 
