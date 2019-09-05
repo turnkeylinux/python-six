@@ -1,3 +1,10 @@
+six (1.12.0-3) UNRELEASED; urgency=medium
+
+  * Replace manually-written basic autopkgtests with "Testsuite:
+    autopkgtest-pkg-python".
+
+ -- Colin Watson <cjwatson@debian.org>  Thu, 05 Sep 2019 12:05:22 +0100
+
 six (1.12.0-2) unstable; urgency=medium
 
   [ Ondřej Nový ]
