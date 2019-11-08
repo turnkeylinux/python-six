@@ -76,7 +76,9 @@ Six provides constants that may differ between Python versions.  Ones ending
 .. data:: binary_type
 
    Type for representing binary data.  This is :func:`py2:str` in Python 2 and
-   :func:`py3:bytes` in Python 3.
+   :func:`py3:bytes` in Python 3.  Python 2.6 and 2.7 include ``bytes`` as a
+   builtin alias of ``str``, so six’s version is only necessary for Python 2.5
+   compatibility.
 
 
 .. data:: MAXSIZE
@@ -442,7 +444,7 @@ string data in all Python versions.
 
 .. function:: ensure_str(s, encoding='utf-8', errors='strict')
 
-   Coerce *s* to ``str``. ``encoding``, ``errors`` are the same
+   Coerce *s* to ``str``. *encoding*, *errors* are the same as
    :meth:`py3:str.encode`
 
 
@@ -582,7 +584,11 @@ Supported renames:
 +------------------------------+-------------------------------------+---------------------------------------+
 | ``cStringIO``                | :func:`py2:cStringIO.StringIO`      | :class:`py3:io.StringIO`              |
 +------------------------------+-------------------------------------+---------------------------------------+
-| ``dbm_gnu``                  | :func:`py2:gdbm`                    | :class:`py3:dbm.gnu`                  |
+| ``collections_abc``          | :mod:`py2:collections`              | :mod:`py3:collections.abc` (3.3+)     |
++------------------------------+-------------------------------------+---------------------------------------+
+| ``dbm_gnu``                  | :mod:`py2:gdbm`                     | :mod:`py3:dbm.gnu`                    |
++------------------------------+-------------------------------------+---------------------------------------+
+| ``dbm_ndbm``                 | :mod:`py2:dbm`                      | :mod:`py3:dbm.ndbm`                   |
 +------------------------------+-------------------------------------+---------------------------------------+
 | ``_dummy_thread``            | :mod:`py2:dummy_thread`             | :mod:`py3:_dummy_thread`              |
 +------------------------------+-------------------------------------+---------------------------------------+
