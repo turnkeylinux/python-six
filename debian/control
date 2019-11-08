@@ -18,7 +18,7 @@ Build-Depends: debhelper-compat (= 9),
                python3-pytest,
                python3-setuptools,
                python3-sphinx,
-Standards-Version: 4.1.0
+Standards-Version: 4.4.1
 Vcs-Git: https://salsa.debian.org/python-team/modules/six.git
 Vcs-Browser: https://salsa.debian.org/python-team/modules/six
 Homepage: https://pypi.python.org/pypi/six
