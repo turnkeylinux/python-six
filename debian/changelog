@@ -1,4 +1,4 @@
-six (1.13.0-1) UNRELEASED; urgency=medium
+six (1.13.0-1) unstable; urgency=medium
 
   [ Emmanuel Arias ]
   * Team upload.
@@ -13,7 +13,7 @@ six (1.13.0-1) UNRELEASED; urgency=medium
     upstream.
   * Fix HTML paths in doc-base control file.
 
- -- Emmanuel Arias <emmanuelarias30@gmail.com>  Fri, 08 Nov 2019 13:45:35 -0300
+ -- Colin Watson <cjwatson@debian.org>  Tue, 12 Nov 2019 08:10:54 +0000
 
 six (1.12.0-2) unstable; urgency=medium
 
