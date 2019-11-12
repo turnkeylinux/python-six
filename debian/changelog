@@ -9,8 +9,6 @@ six (1.13.0-1) UNRELEASED; urgency=medium
   [ Colin Watson ]
   * Replace manually-written basic autopkgtests with "Testsuite:
     autopkgtest-pkg-python".
-  * Ignore debian/files
-  * Ignore debian/files
 
  -- Emmanuel Arias <emmanuelarias30@gmail.com>  Fri, 08 Nov 2019 13:45:35 -0300
 
