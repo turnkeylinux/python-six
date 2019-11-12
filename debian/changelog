@@ -11,6 +11,7 @@ six (1.13.0-1) UNRELEASED; urgency=medium
     autopkgtest-pkg-python".
   * Remove build-dependencies on python-py and python3-py, no longer used
     upstream.
+  * Fix HTML paths in doc-base control file.
 
  -- Emmanuel Arias <emmanuelarias30@gmail.com>  Fri, 08 Nov 2019 13:45:35 -0300
 
