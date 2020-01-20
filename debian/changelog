@@ -1,4 +1,4 @@
-six (1.14.0-1) UNRELEASED; urgency=medium
+six (1.14.0-1) unstable; urgency=medium
 
   [ Debian Janitor ]
   * Remove unnecessary team-upload line in changelog.
@@ -8,7 +8,7 @@ six (1.14.0-1) UNRELEASED; urgency=medium
   [ Colin Watson ]
   * New upstream release.
 
- -- Colin Watson <cjwatson@debian.org>  Mon, 20 Jan 2020 19:29:28 +0000
+ -- Colin Watson <cjwatson@debian.org>  Mon, 20 Jan 2020 21:39:42 +0000
 
 six (1.13.0-1) unstable; urgency=medium
 
