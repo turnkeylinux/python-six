@@ -1,3 +1,9 @@
+six (1.14.0-3) unstable; urgency=medium
+
+  * Dont run unittests for python2 binary, to reduce pytest rdeps
+
+ -- Sandro Tosi <morph@debian.org>  Mon, 13 Apr 2020 20:16:04 -0400
+
 six (1.14.0-2) unstable; urgency=medium
 
   * Build-depend on python2 rather than python.
