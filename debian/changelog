@@ -1,6 +1,10 @@
-six (1.14.0-4) UNRELEASED; urgency=medium
+six (1.15.0-1) UNRELEASED; urgency=medium
 
+  [ Debian Janitor ]
   * Update standards version to 4.5.0, no changes needed.
+
+  [ Colin Watson ]
+  * New upstream release.
 
  -- Debian Janitor <janitor@jelmer.uk>  Tue, 28 Apr 2020 01:40:31 +0000
 
