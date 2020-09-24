@@ -16,8 +16,8 @@ Build-Depends: debhelper-compat (= 12),
                python3-setuptools,
                python3-sphinx,
 Standards-Version: 4.5.0
-Vcs-Git: https://salsa.debian.org/python-team/modules/six.git
-Vcs-Browser: https://salsa.debian.org/python-team/modules/six
+Vcs-Git: https://salsa.debian.org/python-team/packages/six.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/six
 Homepage: https://pypi.python.org/pypi/six
 Testsuite: autopkgtest-pkg-python
 
