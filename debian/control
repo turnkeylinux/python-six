@@ -1,7 +1,7 @@
 Source: six
 Section: python
 Priority: optional
-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Uploaders: Colin Watson <cjwatson@debian.org>, Barry Warsaw <barry@debian.org>,
 Build-Depends: debhelper-compat (= 12),
                dh-python,
