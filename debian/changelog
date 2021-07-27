@@ -1,5 +1,8 @@
-six (1.16.0-2) UNRELEASED; urgency=medium
+six (1.16.0-2) unstable; urgency=medium
 
+  * Team upload.
+
+  [ Andreas Beckmann ]
   * python-six/python3-six: Copy Breaks: python (<< 2.7.18),
     python-minimal (<< 2.7.18), libpython-stdlib (<< 2.7.18),
     python-iso8601 (<< 0.1.12-2~), python-pbr (<< 5.4.5) from python2.7 to
@@ -11,7 +14,7 @@ six (1.16.0-2) UNRELEASED; urgency=medium
     high scoring Python module packages in these cases, making them ideal
     candidates for such copies of the Breaks.  (Closes: #991433)
 
- -- Andreas Beckmann <anbe@debian.org>  Fri, 11 Jun 2021 15:49:07 +0200
+ -- Stefano Rivera <stefanor@debian.org>  Tue, 27 Jul 2021 11:44:18 -0400
 
 six (1.16.0-1) unstable; urgency=medium
 
