@@ -26,6 +26,11 @@ Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends},
          ${python:Depends},
+Breaks: python (<< 2.7.18),
+        python-minimal (<< 2.7.18),
+        libpython-stdlib (<< 2.7.18),
+        python-iso8601 (<< 0.1.12-2~),
+        python-pbr (<< 5.4.5),
 Description: Python 2 and 3 compatibility library (Python 2 interface)
  Six is a Python 2 and 3 compatibility library. It provides utility
  functions for smoothing over the differences between the Python versions
@@ -40,6 +45,9 @@ Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends},
          ${python3:Depends},
+Breaks: python (<< 2.7.18),
+        python-minimal (<< 2.7.18),
+        libpython-stdlib (<< 2.7.18),
 Description: Python 2 and 3 compatibility library (Python 3 interface)
  Six is a Python 2 and 3 compatibility library. It provides utility
  functions for smoothing over the differences between the Python versions
