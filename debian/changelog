@@ -1,6 +1,7 @@
 six (1.16.0-3) UNRELEASED; urgency=medium
 
   * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.5.1, no changes needed.
 
  -- Debian Janitor <janitor@jelmer.uk>  Wed, 25 Aug 2021 20:18:59 -0000
 
