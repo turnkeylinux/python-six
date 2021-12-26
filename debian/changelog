@@ -1,4 +1,4 @@
-six (1.16.0-3) UNRELEASED; urgency=medium
+six (1.16.0-3) unstable; urgency=medium
 
   [ Debian Janitor ]
   * Bump debhelper from old 12 to 13.
@@ -7,7 +7,7 @@ six (1.16.0-3) UNRELEASED; urgency=medium
   [ Colin Watson ]
   * Link directly to upstream in Homepage and debian/copyright.
 
- -- Debian Janitor <janitor@jelmer.uk>  Wed, 25 Aug 2021 20:18:59 -0000
+ -- Colin Watson <cjwatson@debian.org>  Sun, 26 Dec 2021 02:24:26 +0000
 
 six (1.16.0-2) unstable; urgency=medium
 
