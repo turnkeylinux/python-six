@@ -1,3 +1,10 @@
+six (1.16.0-4) UNRELEASED; urgency=medium
+
+  * Remove Breaks introduced to smooth upgrades to Debian bullseye, in
+    1.16.0-2. No longer needed.
+
+ -- Stefano Rivera <stefanor@debian.org>  Fri, 11 Feb 2022 07:22:59 -0400
+
 six (1.16.0-3) unstable; urgency=medium
 
   [ Debian Janitor ]
