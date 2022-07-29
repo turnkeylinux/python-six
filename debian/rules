@@ -6,13 +6,10 @@ export PYBUILD_BEFORE_TEST := cp -a test_six.py {build_dir}/
 export PYBUILD_AFTER_TEST := \
 	rm -rf {build_dir}/test_six.py \
 	       {build_dir}/*.pyc {build_dir}/__pycache__
-# pypy-pytest package does not exist yet
-export PYBUILD_DISABLE_pypy := test
-export PYBUILD_DISABLE_python2=test
 
 
 %:
-	dh $@ --with python2,python3,pypy,sphinxdoc --buildsystem=pybuild
+	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
 
 override_dh_auto_build:
 	dh_auto_build
