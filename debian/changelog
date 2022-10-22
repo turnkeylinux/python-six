@@ -1,11 +1,12 @@
 six (1.16.0-5) UNRELEASED; urgency=medium
 
+  [ Debian Janitor ]
   * Update standards version to 4.6.0, no changes needed.
   * Update standards version to 4.6.1, no changes needed.
   * Remove constraints unnecessary since buster (oldstable):
     + Build-Depends: Drop versioned constraint on python3.
 
- -- Debian Janitor <janitor@jelmer.uk>  Sat, 30 Jul 2022 02:29:36 -0000
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 22 Oct 2022 10:56:12 +0100
 
 six (1.16.0-4) unstable; urgency=medium
 
