@@ -3,8 +3,10 @@ Section: python
 Priority: optional
 Maintainer: Jeremy Davis <jeremy@turnkeylinux.org>
 Build-Depends: debhelper-compat (= 13),
-               dh-python,
+               dh-python2 (>= 4.20201102+turnkey0),
                python2.7,
+               python2 (>= 2.6.6-3~),
+               python-all,
                python-setuptools,
 Standards-Version: 4.5.1
 Vcs-Git: https://github.com/turnkeylinux/python-six.git
