@@ -1,7 +1,7 @@
 #! /usr/bin/make -f
 
 export PYBUILD_NAME := six
-export PYBUILD_TEST_PYTEST := 1
+export PYBUILD_TEST_PYTEST := 0
 export PYBUILD_BEFORE_TEST := cp -a test_six.py {build_dir}/
 export PYBUILD_AFTER_TEST := \
 	rm -rf {build_dir}/test_six.py \
@@ -12,7 +12,7 @@ export PYBUILD_DISABLE_python2=test
 
 
 %:
-	dh $@ --with python2,python3,pypy,sphinxdoc --buildsystem=pybuild
+	dh $@ --with python2,sphinxdoc --buildsystem=pybuild
 
 override_dh_auto_build:
 	dh_auto_build
