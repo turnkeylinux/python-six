@@ -1,3 +1,5 @@
+NOTE: This is a TurnKey py2 fork - for use with TKLBAM
+
 .. image:: https://img.shields.io/pypi/v/six.svg
    :target: https://pypi.org/project/six/
    :alt: six on PyPI
